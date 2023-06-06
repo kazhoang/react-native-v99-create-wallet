@@ -1,0 +1,30 @@
+<resources>
+  <string name="app_name">MiniNativeCreateWallet</string>
+  <string name="skip">Skip</string>
+  <string name="TODO">TODO</string>
+  <string name="createWallet">Tạo ví mới</string>
+  <string name="importWallet">Thêm ví hiện có</string>
+  <string name="setupWallet">Thiết lập ví</string>
+  <string name="policyNote">Vui lòng xem lại Điều khoản sử dụng và\nChính sách quyền riêng tư của ứng dụng ví V99.</string>
+  <string name="usingPolicy">Điều khoản sử dụng</string>
+  <string name="securityPolicy">Chính sách bảo mật</string>
+  <string name="continueBtn">Tiếp tục</string>
+  <string name="note1">Ví đang được khởi tạo, vui lòng đợi trong giây lát...</string>
+  <string name="note2">Hãy sao lưu ví và giữ nó nơi an toàn, chúng tôi sẽ giúp bạn làm điều đó.</string>
+  <string name="note3">Danh sách từ bí mật không giống như mật khẩu, bạn sẽ không thể khôi phục nếu bạn làm mất nó.</string>
+  <string name="note4">Đừng chia sẻ danh sách từ bí mật đến bất kì ai, dù đó là thành viên của V99 Wallet.</string>
+  <string name="createSuccess">Tạo ví thành công</string>
+  <string name="complete">Complete</string>
+
+  <string name="prompt_to">To</string>
+  <string name="action_send">Send</string>
+  <string name="hint_amount">Amount</string>
+  <string name="hint_contract_address">Contract address</string>
+  <string name="hint_contract_symbol">Symbol</string>
+  <string name="hint_contract_decimals">Decimals</string>
+  <string name="error_invalid_address">Invalid address</string>
+  <string name="error_invalid_amount">Invalid amount</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

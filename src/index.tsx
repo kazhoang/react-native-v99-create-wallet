@@ -12,9 +12,18 @@ const LINKING_ERROR =
   '- You are not using Expo Go\n';
 
 type NativeCreateWalletProps = {
-  color: string;
   style: ViewStyle;
+  onClickCreateButton?: (event: any) => void;
 };
+
+// type NativeCreateWalletRnType = {
+//   showView(): Promise<void>;
+//   showViewNavigateTo(text?: string): Promise<void>;
+// };
+
+// const { NativeCreateWallet } = NativeModules;
+
+// export default NativeCreateWallet as NativeCreateWalletRnType;
 
 const ComponentName = 'NativeCreateWalletView';
 

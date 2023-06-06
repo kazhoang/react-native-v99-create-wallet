@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:contentDescription="@string/TODO"
+    android:scaleType="centerCrop"
+    android:src="@drawable/onboarding_bg_v99" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    android:layout_gravity="bottom">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="24dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+      <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="437dp">
+
+        <ImageView
+          android:layout_width="24dp"
+          android:layout_height="24dp"
+          android:layout_marginEnd="@dimen/normal_margin"
+          android:contentDescription="@string/TODO"
+          app:srcCompat="@drawable/ic_support" />
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.1"
+
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:id="@+id/note1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:background="@drawable/message_background"
+            android:orientation="horizontal"
+            android:padding="@dimen/upsize_padding"
+            android:visibility="invisible">
+
+            <ImageView
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:contentDescription="@string/TODO"
+              app:srcCompat="@drawable/ic_time" />
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/big_margin"
+              android:gravity="center_vertical"
+              android:text="@string/note1"
+              android:textColor="#FFFFFF"
+              android:textSize="@dimen/normal_text" />
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/note2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:background="@drawable/message_background"
+            android:orientation="horizontal"
+            android:padding="@dimen/upsize_padding"
+            android:visibility="invisible">
+
+            <ImageView
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_marginEnd="@dimen/normal_margin"
+              android:contentDescription="@string/TODO"
+              app:srcCompat="@drawable/ic_store"
+              tools:ignore="ImageContrastCheck" />
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/normal_margin"
+              android:gravity="center_vertical"
+              android:text="@string/note2"
+              android:textColor="#FFFFFF"
+              android:textSize="@dimen/normal_text" />
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/note3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:background="@drawable/message_background"
+            android:orientation="horizontal"
+            android:padding="@dimen/upsize_padding"
+            android:visibility="invisible">
+
+            <ImageView
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_marginEnd="@dimen/normal_margin"
+              android:contentDescription="@string/TODO"
+              app:srcCompat="@drawable/ic_key" />
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/normal_margin"
+              android:gravity="center_vertical"
+              android:text="@string/note3"
+              android:textColor="#FFFFFF"
+              android:textSize="@dimen/normal_text" />
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/note4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:background="@drawable/message_background"
+            android:orientation="horizontal"
+            android:padding="@dimen/upsize_padding"
+            android:visibility="invisible">
+
+            <ImageView
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_marginEnd="@dimen/normal_margin"
+              android:contentDescription="@string/TODO"
+              app:srcCompat="@drawable/ic_triangle_warning" />
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/normal_margin"
+              android:gravity="center_vertical"
+              android:text="@string/note4"
+              android:textColor="#FFFFFF"
+              android:textSize="@dimen/normal_text" />
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/message2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+          android:layout_width="24dp"
+          android:layout_height="24dp"
+          android:layout_marginEnd="@dimen/normal_margin"
+          android:contentDescription="@string/TODO"
+          app:srcCompat="@drawable/ic_support" />
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.1"
+          android:background="@drawable/message_background"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:contentDescription="@string/TODO"
+            android:drawablePadding="@dimen/normal_margin"
+            android:gravity="center_vertical"
+            android:padding="@dimen/upsize_padding"
+            android:text="@string/createSuccess"
+            android:textColor="@color/mint"
+            android:textSize="@dimen/normal_text"
+            app:drawableStartCompat="@drawable/ic_success" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/upsize_padding"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:background="@drawable/success_create_wallet_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/upsize_padding">
+
+            <ImageView
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_marginEnd="@dimen/normal_margin"
+              android:contentDescription="@string/TODO"
+              app:srcCompat="@drawable/ic_wallet_circle" />
+
+            <TextView
+              android:id="@+id/addressField"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/normal_margin"
+              android:gravity="center_vertical"
+              android:textColor="@color/white"
+              android:textSize="12sp" />
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnComplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="@dimen/upsize_padding"
+        android:backgroundTint="#FBAB00"
+        android:minHeight="48dip"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/complete"
+        android:textAllCaps="false"
+        android:textColor="#5D4037"
+        android:visibility="invisible"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

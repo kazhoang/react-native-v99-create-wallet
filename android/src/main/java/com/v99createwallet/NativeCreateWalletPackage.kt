@@ -8,7 +8,7 @@ import com.facebook.react.uimanager.ViewManager
 
 class NativeCreateWalletPackage : ReactPackage {
   override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-    return emptyList()
+    return listOf(NativeCreateWalletModule(reactContext))
   }
 
   override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {

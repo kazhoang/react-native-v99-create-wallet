@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@color/black500"
+  android:paddingHorizontal="@dimen/activity_horizontal_margin"
+  android:gravity="center"
+
+  android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/big_margin"
+      android:gravity="center"
+      android:text="@string/setupWallet"
+      android:textAlignment="center"
+      android:textColor="#FFFFFF"
+      android:textSize="@dimen/title_text"
+      android:textStyle="bold" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/big_margin"
+      android:gravity="center"
+      android:text="@string/policyNote"
+      android:textAlignment="center"
+      android:textColor="#FFFFFF"
+      android:textSize="@dimen/small_text" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinue"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+          android:id="@+id/btnUsingPolicy"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center_vertical"
+          android:minHeight="48dp"
+          android:orientation="horizontal"
+          android:weightSum="1">
+
+          <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/big_margin"
+            android:layout_weight="0.9"
+            android:gravity="center_vertical"
+            android:text="@string/usingPolicy"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/normal_text" />
+
+          <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:contentDescription="@string/TODO"
+            app:srcCompat="@drawable/ic_chevron_right_24dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_marginVertical="@dimen/small_margin"
+          android:background="@android:color/darker_gray" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+          android:id="@+id/btnSecurityPolicy"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center_vertical"
+          android:minHeight="48dp"
+          android:orientation="horizontal"
+          android:weightSum="1">
+
+          <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/big_margin"
+            android:layout_weight="0.9"
+            android:gravity="center_vertical"
+            android:text="@string/securityPolicy"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/normal_text" />
+
+          <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:contentDescription="@string/TODO"
+            app:srcCompat="@drawable/ic_chevron_right_24dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+      </LinearLayout>
+
+      <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/big_margin"
+        android:buttonTint="@color/primary900"
+        android:checked="false"
+        android:minHeight="48dp"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/primary900"
+        android:text="@string/policyNote"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="p" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
+        style="@style/MaterialButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:enabled="false"
+        android:minHeight="48dip"
+        android:paddingTop="8dp"
+        android:layout_marginBottom="@dimen/upsize_padding"
+        android:paddingBottom="8dp"
+        android:text="@string/continueBtn"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </LinearLayout>
+

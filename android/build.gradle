@@ -1,3 +1,13 @@
+Properties properties = new Properties()
+File localProps = new File(rootDir.absolutePath, "local.properties")
+if (localProps.exists()) {
+  properties.load(localProps.newDataInputStream())
+  println "Authenticating user: " + properties.getProperty("gpr.user")
+} else {
+  println "local.properties not found, please create it next to build.gradle and set gpr.user and gpr.key (Create a GitHub package read only + non expiration token at https://github.com/settings/tokens)\n" +
+    "Or set GITHUB_USER and GITHUB_TOKEN environment variables"
+}
+
 buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
   def kotlin_version = rootProject.ext.has("kotlinVersion") ? rootProject.ext.get("kotlinVersion") : project.properties["NativeCreateWallet_kotlinVersion"]
@@ -5,6 +15,8 @@ buildscript {
   repositories {
     google()
     mavenCentral()
+    maven { url 'https://jitpack.io'}
+
   }
 
   dependencies {
@@ -13,6 +25,21 @@ buildscript {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
 }
+
+allprojects {
+  repositories {
+    google()
+    mavenCentral()
+    maven {
+      url = uri("https://maven.pkg.github.com/trustwallet/wallet-core")
+      credentials {
+        username = properties.getProperty("gpr.user") as String?: System.getenv("GITHUB_USER")
+        password = properties.getProperty("gpr.key") as String?: System.getenv("GITHUB_TOKEN")
+      }
+    }
+  }
+}
+
 
 def isNewArchitectureEnabled() {
   return rootProject.hasProperty("newArchEnabled") && rootProject.getProperty("newArchEnabled") == "true"
@@ -64,6 +91,7 @@ android {
 repositories {
   mavenCentral()
   google()
+  maven { url 'https://jitpack.io'}
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
@@ -74,6 +102,16 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'com.google.android.material:material:1.9.0'
+  implementation "com.trustwallet:wallet-core:3.1.35"
+//  implementation ('org.web3j:core:4.8.7-android')
+  implementation 'org.web3j:core:4.1.0-android'
+  implementation "org.ethereum:geth:1.7.0"
+
+  def nav_version = "2.5.3"
+  implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+  implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
 }
 
 if (isNewArchitectureEnabled()) {

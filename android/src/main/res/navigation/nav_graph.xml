@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_graph"
+  app:startDestination="@id/sendDetail">
+
+  <fragment
+    android:id="@+id/home2"
+    android:name="com.v99createwallet.Home"
+    android:label="fragment_home"
+    tools:layout="@layout/fragment_home">
+    <action
+      android:id="@+id/action_home2_to_walletPolicy2"
+      app:destination="@id/walletPolicy"
+      app:enterAnim="@anim/catalyst_fade_in"
+      app:exitAnim="@anim/catalyst_fade_out"
+      app:popEnterAnim="@anim/catalyst_fade_in"
+      app:popExitAnim="@anim/catalyst_fade_out" />
+  </fragment>
+  <fragment
+    android:id="@+id/walletPolicy"
+    android:name="com.v99createwallet.WalletPolicy"
+    android:label="fragment_wallet_policy"
+    tools:layout="@layout/fragment_wallet_policy">
+    <action
+      android:id="@+id/action_walletPolicy_to_createWalletStory"
+      app:destination="@id/createWalletStory" />
+  </fragment>
+  <fragment
+    android:id="@+id/createWalletStory"
+    android:name="com.v99createwallet.CreateWalletStory"
+    android:label="fragment_create_wallet_story"
+    tools:layout="@layout/fragment_create_wallet_story">
+    <action
+      android:id="@+id/action_createWalletStory_to_home2"
+      app:destination="@id/home2"
+      app:launchSingleTop="true"
+      app:popUpTo="@+id/nav_graph"
+      app:popUpToInclusive="true" />
+  </fragment>
+  <fragment
+    android:id="@+id/tokenSend"
+    android:name="com.v99createwallet.TokenSend"
+    android:label="fragment_toke_send"
+    tools:layout="@layout/fragment_token_send" />
+  <fragment
+    android:id="@+id/sendDetail"
+    android:name="com.v99createwallet.SendDetail"
+    android:label="fragment_send_detail"
+    tools:layout="@layout/fragment_send_detail" />
+</navigation>

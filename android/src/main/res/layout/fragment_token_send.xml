@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+  <include layout="@layout/layout_simple_toolbar" />
+  <LinearLayout
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_marginTop="?actionBarSize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+      android:id="@+id/send_to_address_layout"
+      android:layout_marginTop="@dimen/big_margin"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      >
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/to_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+          android:id="@+id/send_to_address"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:autofillHints=""
+          android:hint="@string/prompt_to"
+          android:text="0x793638C25cF76007579b8B77B380dfe07e17F911"
+          android:imeActionLabel="@string/prompt_to"
+          android:imeOptions="actionUnspecified"
+          android:inputType="text"
+          android:maxLines="1"
+          android:paddingEnd="@dimen/half_large_padding"
+          tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/amount_input_layout"
+      android:layout_marginTop="@dimen/big_margin"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+      <EditText
+        android:id="@+id/send_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_amount"
+        android:text="1"
+        android:imeActionLabel="@string/hint_amount"
+        android:imeOptions="actionUnspecified"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+        android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+      android:id="@+id/send_native_token_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Send Native Token" />
+
+    <Button
+      android:id="@+id/send_token_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Send Token" />
+  </LinearLayout>
+</FrameLayout>

@@ -4,9 +4,28 @@ import { StyleSheet, View } from 'react-native';
 import { NativeCreateWalletView } from 'react-native-v99-create-wallet';
 
 export default function App() {
+  // React.useLayoutEffect(() => {
+  //   NativeCreateWallet.showView();
+  // }, []);
+
+  console.log('init');
+
   return (
     <View style={styles.container}>
-      <NativeCreateWalletView color="#32a852" style={styles.box} />
+      <NativeCreateWalletView
+        style={styles.box}
+        onClickCreateButton={(data) => {
+          console.log('trigger', data.nativeEvent.data);
+        }}
+      />
+      {/* <Button
+        onPress={() => NativeCreateWallet.showView()}
+        title={'Open Native Screens'}
+      />
+      <Button
+        onPress={() => NativeCreateWallet.showViewNavigateTo('third')}
+        title={'Open Native Another Screen'}
+      /> */}
     </View>
   );
 }
@@ -18,8 +37,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    width: '100%',
+    height: '100%',
   },
 });
